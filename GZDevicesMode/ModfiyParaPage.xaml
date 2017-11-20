@@ -1,0 +1,26 @@
+﻿<Window x:Class="GZDevicesMode.ModfiyParaPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="AliceBlue"
+        Closing="Window_Closing"
+        Title="重新分析参数设置" Height="200" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="误差比例:" FontSize="18" FontFamily="黑体" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBox  Name="tbWuChaBiLi" Grid.Column="1" Grid.Row="0" FontSize="18"  Margin="5,10" BorderBrush="Black" BorderThickness="1" TextChanged="tbWuChaBiLi_TextChanged"> 5.0</TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="触发段持续时间:" FontSize="15" FontFamily="黑体" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBox  Name="tbChiXuShiJian" Grid.Column="1" Grid.Row="1" FontSize="18"  Margin="5,10" BorderBrush="Black" BorderThickness="1" TextChanged="tbWuChaBiLi_TextChanged">20.0</TextBox>
+        <Button Name="btnChongXinFenXi" Grid.Column="1" Grid.Row="2" Margin="5" Content="重新分析" FontSize="20" FontFamily="黑体" Click="btnChongXinFenXi_Click"></Button>
+        <Button Name="btnMoRenCanShu" Grid.Column="0" Grid.Row="2" Margin="5" Content="默认参数" FontSize="20" FontFamily="黑体" Click="btnMoRenCanShu_Click"></Button>
+
+
+    </Grid>
+</Window>

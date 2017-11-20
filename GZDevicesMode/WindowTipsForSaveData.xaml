@@ -1,0 +1,48 @@
+﻿<Window x:Class="GZDevicesMode.WindowTipsForSaveData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" BorderBrush="{Binding ElementName=lbTCPSeverState, Path=Foreground}" BorderThickness="1"
+        Title="数据保存提示" Height="221" Width="300" Closing="Window_Closing" Icon="Image\change.ico">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Resources/GroupBoxStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style  TargetType="Button">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+                <Setter Property="FontFamily" Value="黑体"></Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="AliceBlue"></Setter>
+                <Setter Property="Margin" Value="5,15"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="BorderThickness" Value="1"></Setter>
+                <Setter Property="BorderBrush" Value="Green"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content="确认" Style="{StaticResource ResourceKey=GlassButton}" FontSize="15" Name="btn_Save" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="60" Height="30" Click="btn_Save_Click"/>
+        <CheckBox FontSize="15" Content="不再提示" IsChecked="True" Name="cb_DonotShowAnyMore" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RadioButton GroupName="WindTip" Name="rb_Save" Grid.Column="0" Grid.ColumnSpan="2"  Content="测试完成默认数据   [保存]" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="20,0"></RadioButton>
+        <RadioButton GroupName="WindTip" Name="rb_NotSvave" IsChecked="True" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"  Content="测试完成默认数据   [不保存]" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="20,0"></RadioButton>
+    </Grid>
+</Window>

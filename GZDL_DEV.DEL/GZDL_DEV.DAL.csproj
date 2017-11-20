@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B729954A-A322-48F6-88F6-558DA0A49B86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GZDL_DEV.DEL</RootNamespace>
+    <AssemblyName>GZDL_DEV.DEL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassDataMatch.cs" />
+    <Compile Include="OleDbHelper.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="TCPHelper.cs" />
+    <Compile Include="WordExport.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="DAO">
+      <Guid>{00025E01-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>99</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
